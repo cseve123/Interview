@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin负值问题</title>
+    <style>
+        body {
+            margin: 20px;
+        }
+
+        .float-left {
+            float: left;
+        }
+
+        .clearfix:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .container {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .container .item {
+            width: 100px;
+            height: 100px;
+        }
+
+        .container .border-blue {
+            border: 1px solid blue;
+        }
+
+        .container .border-red {
+            border: 1px solid red;
+        }
+
+        .margin1 {
+            margin-top: -20px;
+            margin-bottom: -20px;
+        }
+
+        .margin2 {
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- TODO: margin的left,right,top,bottom分别负值会怎么样 -->
+    <!-- 
+        FIXME:答案：margin-top和margin-left为负值，元素会向上、向左移动
+        margin-right,右边的元素会往左移动，自身不受影响
+        margin-bottom,下面的元素会往上移动，自身不受影响
+     -->
+    <p>用于测试 margin top bottom 的负数情况</p>
+    <div class="container">
+        <div class="item border-blue margin1">
+            this is item 1
+        </div>
+        <div class="item border-red">
+            this is item 2
+        </div>
+    </div>
+
+    <p>用于测试 margin left right 的负数情况</p>
+    <div class="container clearfix">
+        <div class="item border-blue float-left margin2">
+            this is item 3
+        </div>
+        <div class="item border-red float-left">
+            this is item 4
+        </div>
+    </div>
+</body>
+
+</html>

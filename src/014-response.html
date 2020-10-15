@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media query-响应式</title>
+    <style>
+        @media only screen and (max-width: 374px) {
+            /* iphone5 */
+            html {
+                font-size: 86px;
+            }
+        }
+        @media only screen and (min-width: 375px) and (max-width: 413px) {
+            /* iphone 7 */
+            html {
+                font-size: 100px;
+            }
+        }
+        @media only screen and (max-width: 414px) {
+            /* iphone 6p */
+            html {
+                font-size: 110px;
+            }
+        }
+        body {
+            font-size: 0.16rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        this is div
+    </div>
+</body>
+</html>

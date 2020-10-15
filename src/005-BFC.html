@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BFC的理解和应用</title>
+    <style>
+        .container {
+            background-color: #f1f1f1;
+        }
+        .left {
+            float: left;
+        }
+        .bfc {
+            overflow: hidden; /* 触发BFC */
+        }
+    </style>
+</head>
+<body>
+    <!-- TODO: 问题：BFC的理解和应用 -->
+    <!-- FIXME: 答案：一块独立的渲染区域，内部元素渲染不会影响边界外的元素 -->
+    <!-- 触发BFC解决内部float对外面的影响 -->
+    <div class="container bfc">
+        <img src="https://www.imooc.com/static/img/index/logo.png" alt="logo" class="left">
+        <p>某一段文字</p>
+    </div>
+</body>
+</html>

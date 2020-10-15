@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒模型宽计算</title>
+    <style>
+        #div1 {
+            width: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 10px;
+            /* box-sizing: border-box; */
+        }
+    </style>
+</head>
+<body>
+    <!-- TODO: 问：div1的offsetWidth是多大 -->
+    <!-- 答案是122 100 + 10 + 10 + 1 + 1 -->
+    <!-- FIXME:考点：盒模型的标准形式，和box-sizing:border-box不标准形式 -->
+    <!-- offsetWidth = con + padding + border -->
+    <div id="div1">
+        div1
+    </div>
+    <script>
+        console.log(document.getElementById('div1').offsetWidth);
+    </script>
+</body>
+</html>
