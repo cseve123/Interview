@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typeof运算符</title>
+</head>
+<body>
+    <script>
+        // 1，检查值类型
+        // 2，检查函数
+        // 3，大方向的对象
+        // 值类型
+        // 常见值类型
+        let un // undefined
+        let string = 'abc' // string
+        let number = 100 // Number
+        let boolean = true // Boolean
+        let symbol = Symbol('s') // Symbol
+        console.log(typeof un) //undefined
+        console.log(typeof string) // string
+        console.log(typeof number) // number
+        console.log(typeof boolean) // boolean
+        console.log(typeof symbol) //symbol
+
+
+        // 常见引用类型
+        const obj = {x:100}
+        const arr = [1,2,3]
+        const n = null // 特色引用类型，指针指向空地址
+        function fn() {}
+        console.log(typeof obj) // object
+        console.log(typeof arr) // object
+        console.log(typeof n) // object
+        console.log(typeof fn)  //funciton
+    </script>
+</body>
+</html>

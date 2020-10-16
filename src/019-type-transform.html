@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变量类型转换</title>
+</head>
+<body>
+    <script>
+        // 字符串拼接
+        const a = 100 + 10 // 110
+        const b = 100 + '10' // 10010
+        const c = true + '10' // true10
+
+        // ==运算
+        console.log(100 == '100') // true
+        console.log(0 == '') // true
+        console.log(0 == false) // true
+        console.log(false == '') // true
+        console.log(null == undefined) // true
+        // 除了 == null 之外一律用===
+        // obj.a == null = obj.a === null || obj.a === undefined
+
+        // if和逻辑运算
+        console.log(!!0 === false)
+        console.log(!!NaN === false)
+        console.log(!!'' === false)
+        console.log(!!null === false)
+        console.log(!!undefined === false)
+        console.log(!!false === false)
+    </script>
+</body>
+</html>

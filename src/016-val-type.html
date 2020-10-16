@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>值类型和引用类型的区别</title>
+</head>
+<body>
+    <script>
+        // 值类型
+        let a = 100
+        let b = a
+        a = 200
+        console.log(b)  // 100
+        // 引用类型
+        let a1 = {age: 20}
+        let b1 = a1
+        b1.age = 21;
+        console.log(a1.age) // 21
+
+        // 常见值类型
+        let un // undefined
+        let string = 'abc' // string
+        let number = 100 // Number
+        let boolean = true // Boolean
+        let symbol = Symbol('s') // Symbol
+
+        // 常见引用类型
+        const obj = {x:100}
+        const arr = [1,2,3]
+        const n = null // 特色引用类型，指针指向空地址
+        function fn() {}
+    </script>
+</body>
+</html>
