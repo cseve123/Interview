@@ -43,7 +43,7 @@ console.log('scirpt end');
  * script end
  *  */
 /**
- * 异步callback
+ * 异步micro queue 和 callback queue
  * 1的then undefined
  * asnyc1 end // 异步的
  * async3
@@ -53,3 +53,8 @@ console.log('scirpt end');
  * async1 end 3
  * setTimeout
  */
+
+//  同步代码执行完毕call stask清空
+// 执行微任务
+// （尝试触发DOM渲染）
+// 触发Event Loop 执行宏任务
